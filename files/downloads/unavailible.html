@@ -1,0 +1,41 @@
+<div>
+<b id="reason"></b>
+<p></p>
+<b id="redirectnotice"></b>
+<p></p>
+<b id="links"></b>
+</div>
+<script>
+var url = location.search;
+
+function DisplayReason() {
+  if (url == "?os=windows") var txt = "<h1>Windows is not supported yet, sorry!</h1>";
+  else if (url == "?os=apple") var txt = "<h1>Apple is not publicly supported yet, sorry!</h1>";
+  else if (url == "?os=blackberry") var txt = "Blackberry is not a device that is supported to run the emulator, sorry."; var weburl = 'https://oxmc.github.io/pages/help/supportedversion?id="occemu"'; var link = '<a href="https://oxmc.github.io/pages/help/supportedversion?id="occemu"">Manual link</a>';
+  else if (url == "?os=unkown") var txt = "Your device is unkown and may not be supported to run the emulator, sorry.";  var link = '<a href="https://oxmc.github.io/pages/help/supportedversion?id="occemu"">Manual link</a>'; var weburl = 'https://oxmc.github.io/pages/help/supportedversion?id="occemu"';
+  else var txt = "an error has occurred sending error to site owner."; 
+  document.getElementById("reason").innerHTML = txt;
+  document.getElementById("links").innerHTML = link;
+  wait(location.replace(weburl),5000);
+}
+
+function wait(command,time) {
+  setTimeout(function(){
+            location.replace = 'command';
+         }, time);
+}
+
+function GetOS() {
+  var Name = "Not known"; 
+        if (navigator.appVersion.indexOf("Win") != -1) Name =  
+          "Windows OS"; 
+        if (navigator.appVersion.indexOf("Mac") != -1) Name =  
+          "MacOS"; 
+        if (navigator.appVersion.indexOf("X11") != -1) Name =  
+          "UNIX OS"; 
+        if (navigator.appVersion.indexOf("Linux") != -1) Name =  
+          "Linux OS";
+}
+
+DisplayReason();
+</script>

@@ -1,0 +1,1 @@
+This folders holds all images used by the site.

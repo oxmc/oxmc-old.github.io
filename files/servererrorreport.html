@@ -1,0 +1,95 @@
+<div>
+  <div id="mainview">
+    <h1>Prepairing to send email.</h1>
+  </div>
+  <div id="proccess" style="display:none;">
+    <h1>Email sent! You may now close this page.</h1>
+  </div>
+  <div id="unkownid" style="display:none;">
+    <h1>This page was not sent the right data! please dubble check that you are supposed to be at this page!</h1>
+    <a href="https://oxmc.github.io">Homepage</a>
+  </div>
+  <div id="error" style="display:none;">
+    <h1 id="errortxt"></h1>
+  </div>
+  <div id="link" style="display:none;">
+    <a id="link1"></a>
+    <a href="https://oxmc.github.io">Homepage</a>
+  </div>
+</div>
+<script>
+var url = location.search;
+var error = document.getElementById("error");
+var link = document.getElementById("link");
+var linktxt = document.getElementById("link1");
+var proccess = document.getElementById("proccess");
+var mainview = document.getElementById("mainview");
+var txt = document.getElementById("errortxt");
+var unkownid = document.getElementById("unkownid");
+
+
+if (window.location == "https://oxmc.github.io/files/servererrorreport.html") {
+  mainview.style.display = "none";
+  proccess.style.display = "none";
+  link.style.display = "none";
+  error.style.display = "none";
+  unkownid.style.display = "block";
+}
+
+function DisplayProccess() {
+  if (url == "?id=occemu") {
+    SendEmail('mailto:sethlelandolivarez@gmail.com?subject=ErrorReport&body=Error message: Unkown device part2');
+    if (SendEmail() == true) {
+      proccess.style.display = "block";
+      link.style.display = "block";
+    } else {
+      Error('InvalidID');
+    }
+  } else {
+    Error('EmailSendFalse');
+  }
+}
+
+function SendEmail(txt) {
+  window.open(txt);
+  mainview.style.display = "none";
+  proccess.style.display = "block";
+  link.style.display = "block";
+}
+
+function ErrorDisplay(error) {
+  linktxt.style.display = "block";
+  var txt = document.getElementById("errortxt").innerHTML = error;
+}
+
+function Error(id) {
+  mainview.style.display = "none";
+  proccess.style.display = "none";
+  link.style.display = "block";
+  if (id == "EmailSendFalse") {
+    error.style.display = "block";
+    ErrorDisplay('Unable to send email, manual link is below');
+    var txt = document.getElementById("link1").innerHTML = "Manual Link";
+    Link('mailto:sethlelandolivarez@gmail.com?subject=ErrorReport&body=Error message Unkown device part2');
+  } else if (id == "InvalidID") {
+    error.style.display = "block";
+    var txt = document.getElementById("errortxt");
+    ErrorDisplay('Unkown ID "' + url + '".');
+    linktxt.style.display = "block";
+    var txt = document.getElementById("link1").innerHTML = "Manual Link";
+    Link('https://oxmc.github.io');
+  } else {
+    error.style.display = "block";
+    var txt = document.getElementById("errortxt");
+    ErrorDisplay('Unkown error.');
+  }
+}
+
+
+function Link(link) {
+  var linkid = document.getElementById("link1");
+  linkid.setAttribute('href', link);
+}
+
+DisplayProccess();
+</script>

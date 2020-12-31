@@ -1,0 +1,114 @@
+<style>
+  .div2 {
+  background-color: #262600;
+  font-family: Lato, sans-serif;
+}
+
+/* below holds the rest of css options */
+
+div.d {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+div.round2 {
+  border: 2px solid red;
+  border-radius: 8px;
+}
+
+div.a {
+  text-align: center;
+}
+</style
+<div style="display:none;" id="choose device">
+  <div2>
+    <!-- <h1>Your device could not be detected, please choose your phone manufacture.</h1>
+    <form id="devicechoice" action="" method="get">
+      <input type="radio" id="Samsung" name="Phone type1" value="Samsung">
+      <label for="Phone type1">Samsung</label><br>
+      <input type="radio" id="Apple" name="Phone type2" value="Apple">
+      <label for="Phone type2">Apple</label><br>
+      <input type="radio" id="Amazon" name="Phone type3" value="Amazon">
+      <label for="Phone type3">Amazon</label><br>
+      <input type="radio" id="Other" name="Phone type4" value="Other">
+      <label for="Phone type4">Other</label><br>
+      <input type="submit" value="Submit" onsubmit="Getdevicechoice(this.form)">
+    </form> not used -->
+    <div class="a d round2">
+      <h1>Unkown device detected!</h1>
+      <p>Your device could not be detected, here are some manual links to redirect you to your phone type.</p>
+      <a href="https://oxmc.github.io/files/downloads/androidoccemu.html">Android</a>
+      <a href="https://oxmc.github.io/files/downloads/Iosoccemu.html">Ios</a>
+    </div>
+  </div2>
+</div>
+<div id="mainview">
+  <div class="a d round2">
+    <p>Detecting device</p>
+    <p>Device is: <span id="Phonetype"></span></p>
+  </div>
+</div>
+<script>
+  var cd = document.getElementById("choose device");
+var mainview = document.getElementById("mainview");
+/* unsed
+var dc = document.getElementById("devicechoice");
+*/
+var isMobile = {
+  Android: function() {
+    return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry: function() {
+    return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS: function() {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera: function() {
+    return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows: function() {
+    return navigator.userAgent.match(/IEMobile/i);
+  },
+  any: function() {
+    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+  }
+};
+
+if (isMobile.Android()) var device = "ANDROID";
+else if (isMobile.iOS()) var device = "IOS";
+else if (isMobile.Windows()) var device = "WINDOWS";
+else if (isMobile.BlackBerry()) var device = "BLACKBERRY";
+else var device = "Not mobile.";
+ChooseDevice();
+
+function ShowCoicebox() {
+  cd.style.display = "block";
+  mainview.style.display = "none";
+
+}
+
+function HideCoicebox() {
+  cd.style.display = "none";
+}
+
+function ChooseDevice() {
+  document.getElementById("Phonetype").innerHTML = device;
+  if (device == "ANDROID") var link = "https://oxmc.github.io/files/downloads/androidoccemu.html";
+  else if (isMobile.iOS()) var link = "https://oxmc.github.io/files/downloads/Iosoccemu.html";
+  else if (isMobile.Windows()) var link = "https://oxmc.github.io/pages/Computercraft/unavailible?=";
+  else if (isMobile.BlackBerry()) var device = "BLACKBERRY";
+  else var device = "Not mobile.";
+  ShowCoicebox();
+}
+
+/* unsued
+function Getdevicechoice(input) {
+  var dc = input.inputbox.value;
+  alert("Phone manufacture: " + TestVar);
+}
+*/
+</script>
