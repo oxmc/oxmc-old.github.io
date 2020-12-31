@@ -14,7 +14,7 @@ link to lptpsettings <a class="github-button" href="https://github.com/oxmc/lptp
 
 Raspisecurity ![raspisecurity logo](images/raspisecurity-logo.png)
 
-Type of code: ![shellcodelanguage image](images/code/shell.jpg),![htmlcodelanguage image](html.jpg)
+Type of code: ![shellcodelanguage image](images/code/shell.jpg),![htmlcodelanguage image](images/code/html.jpg)
 
 link to Raspisecurity <a class="github-button" href="https://github.com/oxmc/raspisecurity" data-icon="images/logo.jpg" aria-label="link">Click me!</a>
 
