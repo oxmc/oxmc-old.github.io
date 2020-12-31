@@ -8,15 +8,15 @@ oxmc's website
 Current projects:
 lptpsettings ![lptpsettings logo](logo.jpg)
 
-Type of code: ![shellcodelanguage image](shell.jpg)
+Type of code: ![shellcodelanguage image](images/code/shell.jpg)
 
-link to lptpsettings <a class="github-button" href="https://github.com/oxmc/lptpsettings" data-icon="logo.jpg" aria-label="link">Click me!</a>
+link to lptpsettings <a class="github-button" href="https://github.com/oxmc/lptpsettings" data-icon="images/logo.jpg" aria-label="link">Click me!</a>
 
-Raspisecurity ![raspisecurity logo](raspisecurity-logo.png)
+Raspisecurity ![raspisecurity logo](images/raspisecurity-logo.png)
 
-Type of code: ![shellcodelanguage image](shell.jpg),![htmlcodelanguage image](html.jpg)
+Type of code: ![shellcodelanguage image](images/code/shell.jpg),![htmlcodelanguage image](html.jpg)
 
-link to Raspisecurity <a class="github-button" href="https://github.com/oxmc/raspisecurity" data-icon="logo.jpg" aria-label="link">Click me!</a>
+link to Raspisecurity <a class="github-button" href="https://github.com/oxmc/raspisecurity" data-icon="images/logo.jpg" aria-label="link">Click me!</a>
 
 -------------
 
