@@ -2,25 +2,6 @@
 <html>
   <body>
     <video id="camview" autoplay></video>
-    <script>
-      navigator.mediaDevices.getUserMedia({
-        video: {
-          width: {
-            min: 640,
-            max: 1280
-          },
-          height: {
-            min: 480,
-            max: 720
-          },
-          framerate : 60
-        },
-        audio: true
-      })
-      .then(stream => {
-        document.getElementById("camview").srcObject = stream;
-      })
-    </script>
 <div>
   <button id='request'>
     Request Camera
@@ -52,13 +33,23 @@ stopBtn.disabled = true;
 
 function requestVideo() {
   navigator.mediaDevices.getUserMedia({
-      video: true,
-      audio: true
+      video: {
+          width: {
+            min: 640,
+            max: 720
+          },
+          height: { 
+            min: 480,
+            max: 720
+          }
+        },
+        audio: true
+      })
     })
     .then(stream => {
       reqBtn.style.display = 'none';
       startBtn.removeAttribute('disabled');
-      video.srcObject = stream;
+      document.getElementById("camview").srcObject = stream;
     }).catch(e => console.error(e));
 }
 
