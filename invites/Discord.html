@@ -10,6 +10,7 @@
     <h1 id="errortxt"></h1>
   </div>
   <div id="link" style="display:none;">
+    <p id=txt></p>
     <a id="link1"></a>
     <a href="https://oxmc.github.io">Homepage</a>
   </div>
@@ -22,7 +23,7 @@ var error = document.getElementById("error");
 var linkurl = document.getElementById("link");
 var linktxt = document.getElementById("link1");
 var mainview = document.getElementById("mainview");
-var txt = document.getElementById("errortxt");
+var errortxt = document.getElementById("errortxt");
 var unkownid = document.getElementById("unkownid");
 
 function Id() {
@@ -42,6 +43,7 @@ function Id() {
     mainview.style.display = "none";
     linkurl.style.display = "block";
     linktxt.style.display = "block";
+    Link(link)
     txt.innerHTML = "If the page doesn't open the link to join " + server + ", A manual link is below.";
   }   
 }
@@ -54,7 +56,7 @@ function OpenLink(id) {
 
 function ErrorDisplay(error) {
   linktxt.style.display = "block";
-  txt.innerHTML = error;
+  errortxt.innerHTML = error;
 }
 
 function Error(id) {
