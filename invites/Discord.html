@@ -1,0 +1,21 @@
+<div>
+  <div id="mainview">
+    <h1>Preparing invite link...</h1>
+    <p id="demo2"></p>
+  </div>
+  <div id="unkownid" style="display:none;">
+    <h1>This page was not sent the right data! please dubble check that you are supposed to be at this page!</h1>
+    <a href="https://oxmc.github.io">Homepage</a>
+  </div>
+  <div id="error" style="display:none;">
+    <h1 id="errortxt"></h1>
+  </div>
+  <div id="link" style="display:none;">
+    <a id="link1"></a>
+    <a href="https://oxmc.github.io">Homepage</a>
+  </div>
+</div>
+
+<script>
+document.getElementById("demo2").innerHTML = "id:<br>" + location.search;
+</script>
