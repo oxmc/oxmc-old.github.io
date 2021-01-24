@@ -25,7 +25,7 @@ var txt = document.getElementById("errortxt");
 var unkownid = document.getElementById("unkownid");
   
 function DisplayProccess() {
-  if (url == "?id=GB") {
+  if (location.search == "?id=GB") {
     OpenLink('https://discord.gg/eJcstDW4');
     if (OpenLink() == true) {
       link.style.display = "block";
