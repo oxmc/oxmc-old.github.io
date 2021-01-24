@@ -27,7 +27,7 @@ var unkownid = document.getElementById("unkownid");
 function DisplayProccess() {
   if (location.search == "?id=GB") {
     OpenLink('https://discord.gg/eJcstDW4');
-    if (OpenLink() == true) {
+    if (OpenLink() == false) {
       link.style.display = "block";
     } else {
       Error('InvalidID');
