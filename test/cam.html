@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--<html>
+<html>
   <body>
     <video id="camview" autoplay></video>
     <script>
@@ -21,10 +21,7 @@
         document.getElementById("camview").srcObject = stream;
       })
     </script>
-  </body>
-</html>-->
 <div>
-
   <button id='request'>
     Request Camera
   </button>
@@ -39,10 +36,9 @@
   </ul>
 
 </div>
-<video id='video' autoplay></video>
 <script>
   var video, reqBtn, startBtn, stopBtn, ul, stream, recorder;
-video = document.getElementById('video');
+video = document.getElementById('camview');
 reqBtn = document.getElementById('request');
 startBtn = document.getElementById('start');
 stopBtn = document.getElementById('stop');
