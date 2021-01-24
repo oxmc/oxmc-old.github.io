@@ -14,27 +14,33 @@
     <a href="https://oxmc.github.io">Homepage</a>
   </div>
 </div>
-
 <script>
-var url = location.search;
+var url = location.search.substring(1);
+var server;
+var link;
 var error = document.getElementById("error");
 var link = document.getElementById("link");
 var linktxt = document.getElementById("link1");
 var mainview = document.getElementById("mainview");
 var txt = document.getElementById("errortxt");
 var unkownid = document.getElementById("unkownid");
-  
-function DisplayProccess() {
-  if (location.search == "?id=gb") {
-    OpenLink('https://discord.gg/eJcstDW4');
-    if (OpenLink() == false) {
-      link.style.display = "block";
-    } else {
-      Error('InvalidID');
-    }
+
+function Id() {
+  if (url == "id=GB") {
+    server = "Gachabuddys";
+    link = "https://discord.gg/pEHP7QSX72";
+  } else if (url == "id=botspot") {
+    server = "Botspot software";
+    link = "https://discord.gg/";
   } else {
-    Error('InvalidLink1');
+    server = "unkownid";
   }
+  if (server == "unkownid") {
+    mainview.style.display = "none";
+    unkownid.style.display = "block";
+  } else {
+    document.getElementById("demo").innerHTML = "Hello, " + greeting; + "!"
+  }   
 }
 
 function OpenLink(txt) {
@@ -45,7 +51,17 @@ function OpenLink(txt) {
 
 function ErrorDisplay(error) {
   linktxt.style.display = "block";
-  var txt = document.getElementById("errortxt").innerHTML = error;
+  txt.innerHTML = error;
+}
+
+function Error(id) {
+  mainview.style.display = "none";
+  link.style.display = "block";
+}
+
+function ErrorDisplay(error) {
+  linktxt.style.display = "block";
+  txt.innerHTML = error;
 }
 
 function Error(id) {
@@ -54,27 +70,24 @@ function Error(id) {
   if (id == "InvalidLink1") {
     error.style.display = "block";
     ErrorDisplay('Unable to open discord invite link, manual link is below.');
-    var txt = document.getElementById("link1").innerHTML = "Manual Link";
+    linktxt.innerHTML = "Manual Link";
     Link('https://discord.gg/eJcstDW4');
   } else if (id == "InvalidID") {
     error.style.display = "block";
-    var txt = document.getElementById("errortxt");
     ErrorDisplay('Unkown ID "' + url + '".');
     linktxt.style.display = "block";
-    var txt = document.getElementById("link1").innerHTML = "Manual Link";
+    linktxt.innerHTML = "Manual Link";
     Link('https://oxmc.github.io');
   } else {
     error.style.display = "block";
-    var txt = document.getElementById("errortxt");
     ErrorDisplay('Unkown error.');
   }
 }
-
 
 function Link(link) {
   var linkid = document.getElementById("link1");
   linkid.setAttribute('href', link);
 }
 
-DisplayProccess();
+Id();
 </script>
