@@ -14,7 +14,8 @@
             max: 720
           },
           framerate : 60
-        }
+        },
+        audio: true
       })
       .then(stream => {
         document.getElementById("camview").srcObject = stream;
@@ -58,11 +59,10 @@ function requestVideo() {
       video: true,
       audio: true
     })
-    .then(stm => {
-      stream = stm;
+    .then(stream => {
       reqBtn.style.display = 'none';
       startBtn.removeAttribute('disabled');
-      video.src = URL.createObjectURL(stream);
+      video.srcObject = stream;
     }).catch(e => console.error(e));
 }
 
