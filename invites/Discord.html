@@ -3,7 +3,7 @@
     <h1>Preparing invite link...</h1>
   </div>
   <div id="unkownid" style="display:none;">
-    <h1>This page was not sent the right data! please dubble check that you are supposed to be at this page!</h1>
+    <h1>This page was not sent the right data! please double check that you are supposed to be at this page!</h1>
     <a href="https://oxmc.github.io">Homepage</a>
   </div>
   <div id="error" style="display:none;">
@@ -31,7 +31,7 @@ function Id() {
     link = "https://discord.gg/pEHP7QSX72";
   } else if (url == "id=botspot") {
     server = "Botspot software";
-    link = "https://discord.gg/";
+    link = "https://discord.gg/RXSTvaUvuu";
   } else {
     server = "unkownid";
   }
@@ -39,7 +39,8 @@ function Id() {
     mainview.style.display = "none";
     unkownid.style.display = "block";
   } else {
-    document.getElementById("demo").innerHTML = "Hello, " + greeting; + "!"
+    mainview.style.display = "none";
+    link.style.display = "block";
   }   
 }
 
