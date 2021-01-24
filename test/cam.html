@@ -15,7 +15,6 @@
   <ul id='ul'>
     Downloads List:
   </ul>
-
 </div>
 <script>
 var video, reqBtn, startBtn, stopBtn, ul, stream, recorder;
@@ -51,7 +50,6 @@ function startRecording() {
   stopBtn.removeAttribute('disabled');
   startBtn.disabled = true;
 }
-
 
 function stopRecording() {
   recorder.ondataavailable = e => {
