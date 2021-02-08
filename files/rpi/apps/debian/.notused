@@ -1,2 +1,4 @@
 
 echo "deb [trusted=yes] https://oxmc.github.io/files/rpi/apps/debian ./" | sudo tee -a /etc/apt/sources.list > /dev/null
+deb [trusted=yes] https://oxmc.github.io/files/rpi/apps/debian ./
+deb [trusted=yes] https://oxmc.github.io/files/rpi/apps/debian ./
