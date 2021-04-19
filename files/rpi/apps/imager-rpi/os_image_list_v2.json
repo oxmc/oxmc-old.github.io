@@ -1,0 +1,18 @@
+{
+    "imager": {
+        "latest_version": "1.0",
+        "url": "https://oxmc.github.io/pages/Rpi-imager"
+    },
+    "os_list": [
+        {
+            "name": "Pi-Apps OS (32-bit)",
+            "description": "A port of Raspberry PiOS with pi-apps and some other applications ",
+            "icon": "https://oxmc.github.io/images/pi-appsos/logo_(32-bit).png",
+            "url": "https://oxmc.github.io/files/pi-appsos/Pi-Apps_OS_(32-bit).zip",
+            "extract_size": 3967811584,
+            "extract_sha256": "69d909fb67ea78d6b58b7efeabdfbf317df7ef54d39b43ba2016d4816e7b9511",
+            "image_download_size": 1231874816,
+            "release_date": "2021-20-04"
+        }
+    ]
+}
