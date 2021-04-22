@@ -1,0 +1,72 @@
+{
+    "imager": {
+        "latest_version": "1.0",
+        "url": "https://oxmc.github.io/ObsidianOS/ObsidianOS-imager/"
+    },
+    "os_list": [
+        {
+            "name": "ObsidianOS 7 (32-bit)",
+            "description": "Themed to look like WindowsOS ",
+            "icon": "https://oxmc.github.io/ObsidianOS/images/siteimage.png",
+            "url": "https://mega.nz/file/Xo40xYyB#G8we4Yywt513368L-WVA3fVoi2OyAGxdI1iMfWN_Yig",
+            "extract_size": 3967811584,
+            "extract_sha256": "69d909fb67ea78d6b58b7efeabdfbf317df7ef54d39b43ba2016d4816e7b9511",
+            "image_download_size": 1231874816,
+            "release_date": "2021-20-3"
+        },
+        {
+          "name": "ObsidianOS 7 (other)",
+           "description": "Other ObsidianOS 7 based images",
+           "icon": "https://oxmc.github.io/ObsidianOS/images/siteimage.png",
+           "subitems": [
+             {
+               "name": "ObsidianOS 7 (32-bit)",
+               "description": "Themed to look like WindowsOS ",
+               "icon": "https://oxmc.github.io/ObsidianOS/images/siteimage.png",
+               "url": "https://mega.nz/file/Xo40xYyB#G8we4Yywt513368L-WVA3fVoi2OyAGxdI1iMfWN_Yig",
+               "extract_size": 3967811584,
+               "extract_sha256": "69d909fb67ea78d6b58b7efeabdfbf317df7ef54d39b43ba2016d4816e7b9511",
+               "image_download_size": 1231874816,
+               "release_date": "2021-20-3"
+             },
+             {
+               "name": "ObsidianOS 7 Manjaro Edition (32-bit)",
+               "description": "Themed to look like WindowsOS ",
+               "icon": "https://oxmc.github.io/ObsidianOS/images/siteimage.png",
+               "url": "https://mega.nz/file/Olx0mQaC#X0ava46Z_o-nIs9pdsbgn-0owaYxAxBWEMdQmZILCHU",
+               "extract_size": 3967811584,
+               "extract_sha256": "69d909fb67ea78d6b58b7efeabdfbf317df7ef54d39b43ba2016d4816e7b9511",
+               "image_download_size": 1231874816,
+               "release_date": "2021-29-3"
+             }
+           ]
+        },
+        {
+          "name": "Obsidian OS 11 Big Sur (other)",
+           "description": "Other Obsidian OS 11 Big Sur based images",
+           "icon": "https://oxmc.github.io/ObsidianOS/images/siteimage.png",
+           "subitems": [
+             {
+               "name": "Obsidian OS 11 Big Sur (64-bit)",
+               "description": "Themed to look like MacOS ",
+               "icon": "https://oxmc.github.io/ObsidianOS/images/siteimage.png",
+               "url": "https://mega.nz/file/qgATySCb#M0Oqd01AhBbjZXuwxWKv3eLj8JEetamJnREwK4-lEq0",
+               "extract_size": 3967811584,
+               "extract_sha256": "69d909fb67ea78d6b58b7efeabdfbf317df7ef54d39b43ba2016d4816e7b9511",
+               "image_download_size": 1231874816,
+               "release_date": "2021-23-3"
+             }/*,
+             {
+               "name": "Obsidian OS 11 Big Sur Manjaro Edition (64-bit)",
+               "description": "Themed to look like MacOS ",
+               "icon": "https://oxmc.github.io/ObsidianOS/images/siteimage.png",
+               "url": "https://oxmc.github.io/files/pi-appsos/Pi-Apps_OS_(32-bit).zip",
+               "extract_size": 3967811584,
+               "extract_sha256": "69d909fb67ea78d6b58b7efeabdfbf317df7ef54d39b43ba2016d4816e7b9511",
+               "image_download_size": 1231874816,
+               "release_date": "2021-28-3"
+             }*/
+           ]
+        }
+    ]
+}
